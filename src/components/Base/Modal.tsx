@@ -18,7 +18,7 @@ const customStyles = {
 ReactModal.setAppElement('#root');
 
 const Modal = ({ children, showModal, setShowModal }: { children: React.ReactNode, showModal: boolean, setShowModal: React.Dispatch<React.SetStateAction<boolean>> }) => {
-  const { show, toggleModal } = useModal();
+  const { toggleModal } = useModal();
 
   const afterOpenModal = () => {
     console.log('modal is opened')
