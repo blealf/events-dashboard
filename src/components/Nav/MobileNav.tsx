@@ -5,9 +5,8 @@ import AvatarIcon from '../../assets/avatar-icon.svg'
 const MobileNav = () => {
   const [active, setActive] = useState('Home')
   return (
-    <a
-      href="#"
-      className="md:hidden w-full fixed bottom-0 right-0 left-0 p-2 flex
+    <div
+      className="z-[99] md:hidden w-full fixed bottom-0 right-0 left-0 p-2 flex
       justify-between items-center gap-4 cursor-pointer bg-main-light
       dark:bg-main-alt-dark border-t border-icon-stroke-light"
     >
@@ -28,7 +27,7 @@ const MobileNav = () => {
         {active === 'Profile' ? <img src={AvatarIcon} alt="avatar" /> : <img src={AvatarIcon} alt="avatar" />}
         {active === 'Profile' ? <p className="text-primary">Profile</p> : <p className="text-text-alt-light dark:text-secondary">Profile</p>}
       </div>
-    </a>
+    </div>
   )
 }
 

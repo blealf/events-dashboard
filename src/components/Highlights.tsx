@@ -40,7 +40,7 @@ const Highlights = () => {
   ]
 
   return (
-    <HighlightsWrapper>
+    <HighlightsWrapper className="p-5 md:p-0">
       {cardItems.map((item, index ) => (
         <Card key={index} className="p-4">
           <div className="">

@@ -10,7 +10,7 @@ export default {
   theme: {
     screens: {
       sm: '480px',
-      md: '768px',
+      md: '800px',
       lg: '976px',
       xl: '1440px',
     },
@@ -52,6 +52,7 @@ export default {
         "grey-1": `#E2E8F0`,
         "button-outline": `#E2E8F0`,
         "table-header": `#64748B`,
+        "table-header-bg": `#6A6676`,
         "green-text": `#10B981`,
         "green-bg": `#D1FAE5`,
         "red-bg": `#F43F5E`,
@@ -60,6 +61,9 @@ export default {
         success: `#10B981`,
         danger: `#F43F5E`,
         "icon-stroke-light": `#ADA9BB`,
+        "text-toolbar-dark": `#CBD5E1`,
+        "status-completed": `#65DDB5`,
+        "status-inprogress": `#77B1FF`,
       },
     }
   },

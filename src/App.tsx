@@ -17,7 +17,7 @@ function App() {
       <ThemeProvider>
         <MobileNav />
         <ModalProvider>
-            <div className="w-full relative flex flex-col md:flex-row justify-start items-start">
+            <div className="pb-[120px] w-full relative flex flex-col md:flex-row justify-start items-start">
               <SideNav />
               <Dashboard />
             </div>

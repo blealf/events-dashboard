@@ -16,7 +16,7 @@ const SideNav = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false)
   const { toggleTheme, darkMode } = useTheme();
 
-  const mainSlideClass = `w-full md:max-w-[240px]  ${collapsed ? 'md:w-[64px]' : 'md:w-[240px]'} 
+  const mainSlideClass = `z-[99] w-full md:max-w-[240px]  ${collapsed ? 'md:w-[64px]' : 'md:w-[240px]'} 
     opacity-0 md:!opacity-100 absolute top-0 right-0 -left-[100vw] md:!left-0 bottom-0 
     md:relative h-[100vh] md:h-[90vh] bg-main-light dark:bg-main-dark border-r transition-all delay-100 
     md:transition-none border-border-primary dark:border-none p-4 md:p-2
