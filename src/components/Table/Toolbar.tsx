@@ -4,12 +4,23 @@ import DropDown from '../Base/DropDown'
 import ExportIcon from '../../Icons/EsportIcon'
 import ThreeDotsIcon from '../../Icons/ThreeDotsIcon'
 import { useTheme } from '../../Context/ThemeProvider'
+import { useEffect, useState } from 'react'
 
 const Toolbar = ({ items, setFilteredItems }: { items: any, setFilteredItems: any }) => {
 
-  const { darkMode } = useTheme()
+  const [toolbarFiltered, setToolbarFiltered] = useState(items);
 
-  const handleSearchItems = (e) => {
+  const { darkMode } = useTheme();
+
+  useEffect(() => {
+    setToolbarFiltered(items)
+  }, [])
+
+  useEffect(() => {
+    setFilteredItems(toolbarFiltered)
+  }, [toolbarFiltered, setFilteredItems])
+
+  const handleSearchItems = (e: any) => {
     console.log(e.target.value)
     if(!e.target.value) return setFilteredItems(items)
     setFilteredItems(items.filter((item: any) => item.name.toLowerCase().includes(e.target.value.toLowerCase() || item.speeaker.toLowerCase().includes(e.target.value.toLowerCase()))))
@@ -19,9 +30,21 @@ const Toolbar = ({ items, setFilteredItems }: { items: any, setFilteredItems: an
     <div className="p-5 md:p-0 w-full flex flex-col xl:flex-row items-center justify-between gap-2">
       <div className="w-full flex flex-col md:flex-row items-center gap-2">
         <Input value="" onChange={handleSearchItems} />
-        <DropDown title="Date" items={[]} selected="" setSelected={() => { }} className="w-full lg:w-auto" />
-        <DropDown title="Status" items={[]} selected="" setSelected={() => { }} className="w-full lg:w-auto" />
-        <DropDown title="Name" items={[]} selected="" setSelected={() => { }} className="w-full lg:w-auto" />
+        <DropDown 
+          title="Date" 
+          items={[]} selected="" setSelected={() => { }} className="w-full lg:w-auto" />
+        <DropDown 
+          title="Status" 
+          items={['All'].concat(Array.from(new Set(items.map(({ status }: { status: string }) => status))))}
+          selected=""
+          setSelected={(value: string) => { 
+            setToolbarFiltered(value === 'All' ? items : items.filter((item: any) => item.status === value))
+          }} className="w-full lg:w-auto" />
+        <DropDown 
+          title="Name" 
+          items={['All'].concat(Array.from(new Set(items.map(({ name }: { name: string }) => name))))}
+          selected=""
+          setSelected={() => { }} className="w-full lg:w-auto" />
       </div>
       <p className="mr-auto text-text-alt-light dark:text-text-dark font-[600] text-sm leading-[20px] whitespace-nowrap"
       >Displaying 100 results</p>

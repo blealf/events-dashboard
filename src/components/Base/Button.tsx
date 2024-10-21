@@ -51,7 +51,7 @@ const Button = (
       case 'success':
         return `bg-success ${otherClasses}`
       default:
-        return 'bg-transparent border border-button-outline text-text-light'
+        return 'border border-button-outline text-text-light'
     }
   }
 
@@ -61,7 +61,7 @@ const Button = (
   const btnClasses = `py-2 px-4 rounded-[2px] flex items-center justify-center gap-2
     cursor-pointer text-[14px] font-[400] text-text-light
     ${bgColor()}
-    ${outlined && 'border border-button-button-outline text-text-alt-light'}
+    ${outlined && 'border border-button-button-outline text-text-alt-light bg-main-light'}
     ${disabled && 'cursor-not-allowed bg-gray-300 text-white'}
     ${className || ''} 
   `

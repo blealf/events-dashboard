@@ -21,8 +21,8 @@ const Table = () => {
   }, [])
 
   return (
-    <div className="w-full flex flex-col mt-7">
-      <h2 className="p-5 md:p-0 mb-[6px] text-lg leading-[16px] font-[500] text-text-light dark:text-text-dark"
+    <div className="w-full flex flex-col mt-5 md:mt-7">
+      <h2 className="px-5 md:px-0 md:mb-[6px] text-lg leading-[16px] font-[500] text-text-light dark:text-text-dark"
       >Events History</h2>
       <Toolbar items={data} setFilteredItems={setFilteredItems} />
       <DataTable header={tableHeader} mobileHeader={mobileHeader} dataItems={filteredItems} />

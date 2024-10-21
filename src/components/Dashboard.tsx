@@ -1,5 +1,7 @@
 import Highlights from './Highlights'
 import Table from './Table/Index'
+import EventGraph from './EventGraph'
+import Carousel from './Carousel'
 
 const Dashboard = () => {
   
@@ -10,7 +12,10 @@ const Dashboard = () => {
         Welcome! here’s your summary
       </h1>
       <Highlights />
-      <div></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-3 mt-8 p-5 md:p-0 ">
+        <EventGraph />
+        <Carousel />
+      </div>
       <Table />
     </div>
   )
