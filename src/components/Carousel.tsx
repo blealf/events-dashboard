@@ -31,13 +31,13 @@ const Carousel = () => {
 
   return (
     <div className="h-full rounded-[5px]">
-      <div className="relative w-full max-h-[320px] flex items-center justify-center rounded-[5px]">
+      <div className="relative w-full max-h-[320px] md:max-h-[400px] flex items-center justify-center rounded-[5px]">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt="carousel"
-            className={`top-0 left-0 right-0 bottom-0 w-full max-h-[320px] object-cover rounded-[5px] ${currentIndex === index ? 'opacity-8 relative' : 'opacity-0 absolute'} transition-all duration-700 ease-in-out`}
+            className={`top-0 left-0 right-0 bottom-0 w-full max-h-[400px] object-cover rounded-[5px] ${currentIndex === index ? 'opacity-8 relative' : 'opacity-0 absolute'} transition-all duration-700 ease-in-out`}
           />
         ))}
         <button

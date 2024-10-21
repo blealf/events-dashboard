@@ -7,7 +7,7 @@ import Styled from 'styled-components'
 
 const HighlightsWrapper = Styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   width: 100%;
   gap: 12px;

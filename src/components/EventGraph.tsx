@@ -19,7 +19,7 @@ const EventGraph = () => {
   }), [])
 
   const chartOptions = useMemo(() => ({
-    responsive: true,
+    // responsive: true,
     // don't show label
     plugins: {
       legend: {
