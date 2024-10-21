@@ -140,8 +140,13 @@ const DataTable = ({ header, mobileHeader, dataItems }: {
               ${mobileStatusStyle(item.status)}`}><span>{ item.status}</span>
               </p>
           </div>
-          <div className="flex w-full items-center justify-between p-4 bg-[#F5F5F5] dark:bg-main-alt-dark
-            border-b border-icon-stroke-light">
+          <div
+            className="flex w-full items-center justify-between p-4 bg-[#F5F5F5] dark:bg-main-alt-dark
+            border-b border-icon-stroke-light cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation(); handleOpenModal(index)
+            }}
+          >
               <p className="text-sm leading-5 dark:text-secondary overflow-hidden whitespace-nowrap text-ellipsis"
               >{item.speaker}</p>
               <p className="text-sm leading-5 dark:text-secondary overflow-hidden whitespace-nowrap text-ellipsis"
