@@ -34,7 +34,7 @@ const Modal = ({ showModal, setShowModal, item }: { showModal: boolean, setShowM
   const { darkMode } = useTheme();
 
   const afterOpenModal = () => {
-    // console.log('modal is opened')
+    // 
   }
 
   const closeModal = () => {

@@ -30,7 +30,6 @@ const DataTable = ({ header, mobileHeader, dataItems }: {
     const numberOfPages = Math.ceil(dataItems.length / rowsPerPage)
     const calcPageitems = Array.from(Array(numberOfPages))
       .map((_, i) => dataItems.slice(i * rowsPerPage, (i + 1) * rowsPerPage))
-    console.log({ numberOfPages, calcPageitems })
     setNumPages(numberOfPages)
     setCurrentPage(1)
     setPagedItems(calcPageitems)
