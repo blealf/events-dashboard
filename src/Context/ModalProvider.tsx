@@ -12,7 +12,7 @@ export const useModal = () => {
 };
 
 export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const toggleModal = (val: boolean) => {
     setShow((mode) => val? val :!mode);

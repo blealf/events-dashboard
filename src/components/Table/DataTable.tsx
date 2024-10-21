@@ -19,7 +19,7 @@ const DataTable = ({ header, mobileHeader, dataItems }: {
   const [pagedItems, setPagedItems] = useState<any[]>([])
   const [currentPage, setCurrentPage] = useState<number>(1)
   const [numPages, setNumPages] = useState<number>(1)
-  const [showModal, setShowModal] = useState<boolean>(true)
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   const { darkMode } = useTheme()
 

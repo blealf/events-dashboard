@@ -11,7 +11,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
 
   const toggleTheme = () => {
     setDarkMode((mode) => !mode);
@@ -20,8 +20,10 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (darkMode) {
       document.getElementsByTagName("html")[0].classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
     } else {
       document.getElementsByTagName("html")[0].classList.remove("dark");
+      window.localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
