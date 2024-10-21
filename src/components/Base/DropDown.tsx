@@ -13,6 +13,8 @@ const DropDown = (
   
    const { darkMode } = useTheme()
 
+  /* The `useEffect` is used to handle the functionality of closing
+  the dropdown when a user clicks outside of it. Here's a breakdown of what it does: */
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (dropdownItemsRef.current && !dropdownItemsRef.current.contains(event.target)) {
@@ -41,7 +43,7 @@ const DropDown = (
         {!!items.length && items.map((item, index) => (
           <p
             key={index}
-            className={`w-full text-xs overflow-hidden whitespace-nowrap text-ellipsis text-text-alt-light dark:text-text-dark p-2 border-b border-table-header last:border-none cursor-pointer ${selected === item && 'text-primary dark:text-primary'}`}
+            className={`w-full text-xs overflow-hidden whitespace-nowrap text-ellipsis text-text-alt-light dark:text-text-dark p-2 border-b border-table-header last:border-none cursor-pointer ${selected === item && '!text-primary dark:!text-primary'}`}
             onClick={() => setSelected(item)}
           >
             {item}

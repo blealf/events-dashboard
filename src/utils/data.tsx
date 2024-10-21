@@ -10,7 +10,7 @@ export const data = [
   {
     "id": "A1BC2D3E",
     "name": "Cloud Innovation Summit",
-    "date": "2024-10-15",
+    "date": "2024-12-15",
     "speaker": "Jane Doe",
     "status": "Completed"
   },

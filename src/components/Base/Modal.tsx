@@ -34,7 +34,7 @@ const Modal = ({ showModal, setShowModal, item }: { showModal: boolean, setShowM
   const { darkMode } = useTheme();
 
   const afterOpenModal = () => {
-    console.log('modal is opened')
+    // console.log('modal is opened')
   }
 
   const closeModal = () => {
@@ -55,13 +55,16 @@ const Modal = ({ showModal, setShowModal, item }: { showModal: boolean, setShowM
           {darkMode ? <CloseIcon color="#ADA9BB" /> : <CloseIcon />}
         </span>
         <div>
+          {/* Header */}
           <div className="p-6 pb-0">
             <h2 className="text-lg text-text-alt-light leading-7 font-[600] dark:text-secondary">{item?.name || 'Event name'}</h2>
             <p className="text-sm text-table-header leading-5 dark:text-secondary">{item?.date || 'Event date'}</p>
           </div>
+          {/* Description  */}
           <div className="p-6">
             <p className="text-sm text-text-alt-light leading-5 dark:text-secondary">Event Description</p>
           </div>
+          {/* Speakers  */}
           <div className="p-6">
             <div className="flex justiy-start items-center ml-3">
               {speakerImages.map((image, index) => (
